@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
-    <script src="./script.js"></script>
+    <script src="./script.js" defer></script>
     <link rel="stylesheet" href="style.css">
     
 </head>
@@ -13,11 +13,11 @@
     <div class="calculator">
         <div class="display">012</div>
         <div class="buttons">
-            <div class="button"></div><div class="clear button">c</div> <div class="ac button">ac</div> <div class="button operation" id="divide">/</div>
-            <div class="button num7">7</div> <div class="button num8">8</div><div class="button num9">9</div> <div class="button operation" id="multiply">x</div>
-            <div class="button num4">4</div> <div class="button num5">5</div><div class="button num6">6</div> <div class="button operation" id="subtract">-</div>
-            <div class="button num1">1</div> <div class="button num2">2</div><div class="button num3">3</div> <div class="button operation" id="add">+</div>
-            <div class="button num0">0</div> <div class="button point">.</div><div class="button operation" id="equals">=</div> 
+            <div class="button"></div><div class="clear button" onclick="clearDisplay()">c</div> <div class="ac button" onclick="clearDisplay()">ac</div> <div class="button operation" id="divide" data-value="divide" onclick="selectOperation(this.dataset.value)">/</div>
+            <div class="button" data-value="7"  onclick="inputNum(this.dataset.value)">7</div> <div class="button" data-value="8"  onclick="inputNum(this.dataset.value)">8</div><div class="button" data-value="9"  onclick="inputNum(this.dataset.value)">9</div> <div class="button operation" id="multiply" data-value="multiply" onclick="selectOperation(this.dataset.value)">x</div>
+            <div class="button" data-value="4"  onclick="inputNum(this.dataset.value)">4</div> <div class="button" data-value="5"  onclick="inputNum(this.dataset.value)">5</div><div class="button"  data-value="6" onclick="inputNum(this.dataset.value)">6</div> <div class="button operation" id="subtract" data-value="subtract" onclick="selectOperation(this.dataset.value)">-</div>
+            <div class="button" data-value="1"  onclick="inputNum(this.dataset.value)">1</div> <div class="button" data-value="2"  onclick="inputNum(this.dataset.value)">2</div><div class="button"  data-value="3" onclick="inputNum(this.dataset.value)">3</div> <div class="button operation" id="add" data-value="add" onclick="selectOperation(this.dataset.value)">+</div>
+            <div class="button" data-value="0"  onclick="inputNum(this.dataset.value)">0</div> <div class="button" data-value="."  onclick="inputNum(this.dataset.value)">.</div><div class="button operation" id="equals" onclick="findResult()">=</div> 
         </div>
     </div>
 
